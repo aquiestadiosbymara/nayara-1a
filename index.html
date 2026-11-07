@@ -2,72 +2,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1:1 Nayara</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1:1 Nayara</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <link rel="stylesheet" href="./style.css">
+body {
+    background: #fff0f6;
+    font-family: 'Nunito', sans-serif;
+    color: #54283e;
+    min-height: 100vh;
+    padding: 30px 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 68px;
+    color: #e84f91;
+    margin-bottom: 12px;
+}
+
+.horario {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #fbd1e2;
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.punto {
+    width: 9px;
+    height: 9px;
+    background: #e84f91;
+    border-radius: 50%;
+}
+
+.contenedor {
+    max-width: 682px;
+    margin: auto;
+    background: #fffafd;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 30px;
+    padding: 28px 26px;
+    box-shadow: 0 17px 27px rgba(216,91,145,0.17);
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    margin-bottom: 3px;
+}
+
+.descripcion {
+    color: #9c637e;
+    font-size: 15px;
+    margin-bottom: 23px;
+    font-weight: 600;
+}
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 20px 19px;
+    background: #fff0f6;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 21px;
+}
+
+.icono {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: #fbd1e2;
+    color: #e84f91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+
+.texto {
+    flex: 1;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.texto p {
+    color: #9c637e;
+    font-size: 14.5px;
+    line-height: 1.65;
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    background: #e84f91;
+    color: white;
+    padding: 11px 22px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d93e82;
+}
+
+@media(max-width: 560px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    .contenedor {
+        padding: 23px 17px;
+    }
+
+    .tarjeta {
+        flex-wrap: wrap;
+    }
+
+    .texto {
+        flex: 1;
+        min-width: 0;
+    }
+
+    button {
+        margin-left: 73px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <main class="pagina">
+<header>
+    <h1>1:1 Nayara</h1>
 
-        <header class="cabecera">
-            <h1>1:1 Nayara</h1>
+    <div class="horario">
+        <span class="punto"></span>
+        Nuestras clases: martes y jueves, 18:00
+    </div>
+</header>
 
-            <div class="horario">
-                <span class="punto"></span>
-                Nuestras clases: martes y jueves, 18:00
-            </div>
-        </header>
+<main class="contenedor">
 
-        <section class="contenedor">
+    <h2>Recursos</h2>
 
-            <h2>Recursos</h2>
+    <p class="descripcion">
+        Todo lo que preparo para ti, en un solo lugar.
+    </p>
 
-            <p class="descripcion">
-                Todo lo que preparo para ti, en un solo lugar.
+    <article class="tarjeta">
+
+        <div class="icono">♫</div>
+
+        <div class="texto">
+            <h3>Abre el corazón</h3>
+
+            <p>
+                Tu meditación personalizada. Hecha por mí,
+                pensada solo para ti y canalizada con mensajes
+                de Dios. Escúchala antes de nuestra siguiente clase.
             </p>
+        </div>
 
-            <article class="tarjeta">
+        <button onclick="escucharAudio()">Escuchar</button>
 
-                <div class="icono">
-                    <svg viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2"
-                         stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
-                        <rect x="3" y="13" width="4" height="7" rx="2"/>
-                        <rect x="17" y="13" width="4" height="7" rx="2"/>
-                    </svg>
-                </div>
+    </article>
 
-                <div class="texto-tarjeta">
-                    <h3>Abre el corazón</h3>
+</main>
 
-                    <p>
-                        Tu meditación personalizada. Hecha por mí,
-                        pensada solo para ti y canalizada con mensajes
-                        de Dios. Escúchala antes de nuestra siguiente clase.
-                    </p>
-                </div>
-
-                <button id="botonAudio">Escuchar</button>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <audio id="audio" src="./meditacion.mp3"></audio>
-
-    <script src="./script.js"></script>
+<script>
+function escucharAudio() {
+    alert("Próximamente podrás escuchar aquí tu meditación personalizada.");
+}
+</script>
 
 </body>
 </html>
