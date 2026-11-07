@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,60 +7,67 @@
     <title>1:1 Nayara</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <header class="cabecera">
-        <h1>1:1 Nayara</h1>
+    <main class="pagina">
 
-        <div class="horario">
-            <span class="punto"></span>
-            Nuestras clases: martes y jueves, 18:00
-        </div>
-    </header>
+        <header class="cabecera">
+            <h1>1:1 Nayara</h1>
 
-    <main class="contenedor">
-
-        <h2>Recursos</h2>
-        <p class="descripcion">
-            Todo lo que preparo para ti, en un solo lugar.
-        </p>
-
-        <section class="tarjeta">
-
-            <div class="icono">
-                <svg viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2"
-                     stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
-                    <rect x="3" y="13" width="4" height="7" rx="2"/>
-                    <rect x="17" y="13" width="4" height="7" rx="2"/>
-                </svg>
+            <div class="horario">
+                <span class="punto"></span>
+                Nuestras clases: martes y jueves, 18:00
             </div>
+        </header>
 
-            <div class="texto-tarjeta">
-                <h3>Abre el corazón</h3>
+        <section class="contenedor">
 
-                <p>
-                    Tu meditación personalizada. Hecha por mí,
-                    pensada solo para ti y canalizada con mensajes
-                    de Dios. Escúchala antes de nuestra siguiente clase.
-                </p>
-            </div>
+            <h2>Recursos</h2>
 
-            <button id="botonAudio">Escuchar</button>
+            <p class="descripcion">
+                Todo lo que preparo para ti, en un solo lugar.
+            </p>
+
+            <article class="tarjeta">
+
+                <div class="icono">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
+                        <rect x="3" y="13" width="4" height="7" rx="2"/>
+                        <rect x="17" y="13" width="4" height="7" rx="2"/>
+                    </svg>
+                </div>
+
+                <div class="texto-tarjeta">
+                    <h3>Abre el corazón</h3>
+
+                    <p>
+                        Tu meditación personalizada. Hecha por mí,
+                        pensada solo para ti y canalizada con mensajes
+                        de Dios. Escúchala antes de nuestra siguiente clase.
+                    </p>
+                </div>
+
+                <button id="botonAudio">Escuchar</button>
+
+            </article>
 
         </section>
 
     </main>
 
-    <audio id="audio" src="meditacion.mp3"></audio>
+    <audio id="audio" src="./meditacion.mp3"></audio>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>
