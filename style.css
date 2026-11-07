@@ -1,1 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: #fff0f6;
+    font-family: 'Nunito', sans-serif;
+    color: #54283e;
+    min-height: 100vh;
+}
+
+/* CABECERA */
+
+.cabecera {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 33px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 64px;
+    color: #e84f91;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.horario {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #fbd1e2;
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.punto {
+    width: 9px;
+    height: 9px;
+    background: #e84f91;
+    border-radius: 50%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    max-width: 682px;
+    margin: auto;
+    padding: 28px 26px 29px;
+    background: #fffafd;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 30px;
+    box-shadow: 0 17px 27px rgba(216, 91, 145, 0.17);
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 2px;
+}
+
+.descripcion {
+    color: #9c637e;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+/* TARJETA DEL RECURSO */
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 20px 19px;
+    background: #fff0f6;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 21px;
+}
+
+.icono {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: #fbd1e2;
+    color: #e84f91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono svg {
+    width: 29px;
+    height: 29px;
+}
+
+.texto-tarjeta {
+    flex: 1;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.texto-tarjeta p {
+    color: #9c637e;
+    font-size: 14.5px;
+    line-height: 1.62;
+    font-weight: 600;
+}
+
+/* BOTÓN */
+
+button {
+    background: #e84f91;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 11px 22px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #d93e82;
+    transform: translateY(-2px);
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    .cabecera {
+        padding-top: 35px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .contenedor {
+        margin: 0 15px;
+        padding: 23px 17px;
+    }
+
+    .tarjeta {
+        flex-wrap: wrap;
+    }
+
+    .texto-tarjeta {
+        flex-basis: calc(100% - 80px);
+    }
+
+    button {
+        margin-left: 77px;
+    }
+}
