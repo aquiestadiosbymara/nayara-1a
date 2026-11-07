@@ -78,58 +78,51 @@ h2 {
 }
 
 .tarjeta {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    padding: 20px 19px;
+    padding: 20px;
     background: #fff0f6;
     border: 1.5px solid #f6b4d0;
     border-radius: 21px;
 }
 
+.cabecera-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 17px;
+}
+
 .icono {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
     border-radius: 50%;
     background: #fbd1e2;
     color: #e84f91;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 29px;
-}
-
-.texto {
-    flex: 1;
+    font-size: 27px;
 }
 
 h3 {
-    font-size: 17px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 4px;
 }
 
 .texto p {
     color: #9c637e;
-    font-size: 14.5px;
-    line-height: 1.65;
+    font-size: 14px;
+    line-height: 1.6;
     font-weight: 600;
 }
 
-button {
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border: none;
-    border-radius: 30px;
-    background: #e84f91;
-    color: white;
-    padding: 11px 22px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    font-weight: 800;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #d93e82;
+    border-radius: 15px;
+    display: block;
+    margin-top: 17px;
 }
 
 @media(max-width: 560px) {
@@ -142,16 +135,7 @@ button:hover {
     }
 
     .tarjeta {
-        flex-wrap: wrap;
-    }
-
-    .texto {
-        flex: 1;
-        min-width: 0;
-    }
-
-    button {
-        margin-left: 73px;
+        padding: 15px;
     }
 }
 </style>
@@ -178,29 +162,34 @@ button:hover {
 
     <article class="tarjeta">
 
-        <div class="icono">♫</div>
+        <div class="cabecera-tarjeta">
 
-        <div class="texto">
-            <h3>Abre el corazón</h3>
+            <div class="icono">♫</div>
 
-            <p>
-                Tu meditación personalizada. Hecha por mí,
-                pensada solo para ti y canalizada con mensajes
-                de Dios. Escúchala antes de nuestra siguiente clase.
-            </p>
+            <div class="texto">
+                <h3>Abre el corazón</h3>
+
+                <p>
+                    Tu meditación personalizada. Hecha por mí,
+                    pensada solo para ti y canalizada con mensajes
+                    de Dios. Escúchala antes de nuestra siguiente clase.
+                </p>
+            </div>
+
         </div>
 
-        <button onclick="escucharAudio()">Escuchar</button>
+        <iframe
+            class="video"
+            src="https://www.youtube.com/embed/VaStPUczbEY"
+            title="Abre el corazón - Meditación Nayara"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
 
     </article>
 
 </main>
-
-<script>
-function escucharAudio() {
-    alert("Próximamente podrás escuchar aquí tu meditación personalizada.");
-}
-</script>
 
 </body>
 </html>
