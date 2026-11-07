@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    background: #fff0f6;
+    background-color: #fff0f6;
     font-family: 'Nunito', sans-serif;
     color: #54283e;
     min-height: 100vh;
@@ -32,7 +33,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    background: #fbd1e2;
+    background-color: #fbd1e2;
     padding: 9px 17px;
     border-radius: 30px;
     font-size: 14px;
@@ -42,18 +43,18 @@ h1 {
 .punto {
     width: 9px;
     height: 9px;
-    background: #e84f91;
+    background-color: #e84f91;
     border-radius: 50%;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR */
 
 .contenedor {
     max-width: 682px;
-    margin: auto;
+    margin: 0 auto;
     padding: 28px 26px 29px;
-    background: #fffafd;
-    border: 1.5px solid #f6b4d0;
+    background-color: #fffafd;
+    border: 1px solid #f6b4d0;
     border-radius: 30px;
     box-shadow: 0 17px 27px rgba(216, 91, 145, 0.17);
 }
@@ -71,15 +72,15 @@ h2 {
     margin-bottom: 23px;
 }
 
-/* TARJETA DEL RECURSO */
+/* TARJETA */
 
 .tarjeta {
     display: flex;
     align-items: center;
     gap: 17px;
     padding: 20px 19px;
-    background: #fff0f6;
-    border: 1.5px solid #f6b4d0;
+    background-color: #fff0f6;
+    border: 1px solid #f6b4d0;
     border-radius: 21px;
 }
 
@@ -88,7 +89,7 @@ h2 {
     height: 60px;
     min-width: 60px;
     border-radius: 50%;
-    background: #fbd1e2;
+    background-color: #fbd1e2;
     color: #e84f91;
     display: flex;
     align-items: center;
@@ -112,15 +113,15 @@ h3 {
 
 .texto-tarjeta p {
     color: #9c637e;
-    font-size: 14.5px;
+    font-size: 14px;
     line-height: 1.62;
     font-weight: 600;
 }
 
-/* BOTÓN */
+/* BOTON */
 
 button {
-    background: #e84f91;
+    background-color: #e84f91;
     color: white;
     border: none;
     border-radius: 30px;
@@ -129,18 +130,16 @@ button {
     font-size: 14px;
     font-weight: 800;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 button:hover {
-    background: #d93e82;
+    background-color: #d93e82;
     transform: translateY(-2px);
 }
 
-/* MÓVIL */
+/* MOVIL */
 
-@media (max-width: 600px) {
-
+@media screen and (max-width: 600px) {
     .cabecera {
         padding-top: 35px;
     }
