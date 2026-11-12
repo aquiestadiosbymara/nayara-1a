@@ -5,25 +5,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abre el corazón | 1:1 Nayara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    background: #fff0f6;
+    color: #54283e;
+    font-family: 'Nunito', sans-serif;
+}
+
+.contenedor {
+    max-width: 720px;
+    margin: auto;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #b94d7c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.cabecera {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.marca {
+    color: #e84f91;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 25px;
+}
+
+h1 {
+    color: #e84f91;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(43px, 8vw, 62px);
+    font-style: italic;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.subtitulo {
+    color: #9c637e;
+    font-size: 13px;
+}
+
+.contenido {
+    background: #fffafd;
+    border: 1px solid #f6b4d0;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 12px 28px rgba(216,91,145,0.10);
+    text-align: center;
+}
+
+.mensaje {
+    color: #795568;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 14px 26px;
+    background: #e84f91;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #ce3979;
+}
+
+.pie {
+    text-align: center;
+    color: #b78ba0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+@media(max-width: 560px) {
+    .contenido { padding: 21px; }
+}
+</style>
 </head>
+
 <body>
+<main class="contenedor">
 
-<a href="index.html">← Volver a 1:1 Nayara</a>
+    <a class="volver" href="index.html">← Volver a 1:1 Nayara</a>
 
-<h1>Abre el corazón</h1>
-<p>Un momento para ti y para Dios</p>
+    <header class="cabecera">
+        <div class="marca">1:1 Nayara</div>
+        <h1>Abre el corazón</h1>
+        <p class="subtitulo">Un momento para ti y para Dios</p>
+    </header>
 
-<p>
-Busca un lugar tranquilo, respira y regálate
-este momento. Esta meditación ha sido preparada
-especialmente para acompañarte en tu camino.
-</p>
+    <section class="contenido">
+        <p class="mensaje">
+            Busca un lugar tranquilo, respira y regálate
+            este momento. Esta meditación ha sido preparada
+            especialmente para acompañarte en tu camino.
+        </p>
 
-<a href="https://www.youtube.com/watch?v=VaStPUczbEY" target="_blank" rel="noopener noreferrer">
-Ver meditación ♥
-</a>
+        <a class="boton"
+           href="https://www.youtube.com/watch?v=VaStPUczbEY"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ver meditación ♥
+        </a>
 
-<p>Que puedas escuchar con el corazón ♥</p>
+        <p class="pie">Que puedas escuchar con el corazón ♥</p>
+    </section>
 
+</main>
 </body>
 </html>
+
