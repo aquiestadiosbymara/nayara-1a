@@ -1,10 +1,10 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>1:1 Nayara</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -24,11 +24,9 @@ body {
     padding: 35px 20px 60px;
 }
 
-/* CABECERA */
-
 header {
     text-align: center;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -57,8 +55,6 @@ h1 {
     border-radius: 50%;
 }
 
-/* PRESENTACIÓN */
-
 .intro {
     text-align: center;
     max-width: 550px;
@@ -71,19 +67,17 @@ h1 {
     line-height: 1.7;
 }
 
-/* GALERÍA */
+/* NAVEGACIÓN PRINCIPAL */
 
 .galeria {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
     align-items: start;
 }
-
-/* TARJETAS */
 
 .tarjeta-seccion {
     background: #fffafd;
@@ -92,13 +86,19 @@ h1 {
     padding: 23px;
     box-shadow: 0 9px 22px rgba(216,91,145,0.10);
     min-width: 0;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.tarjeta-seccion:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(216,91,145,0.16);
 }
 
 .cabecera-tarjeta {
     display: flex;
     align-items: center;
     gap: 13px;
-    margin-bottom: 19px;
 }
 
 .icono {
@@ -127,65 +127,95 @@ h2 {
     margin-top: 4px;
 }
 
-/* CONTENIDO INTERIOR */
-
-.elemento {
-    background: #fff0f6;
-    border: 1px solid #f6b4d0;
-    border-radius: 16px;
-    padding: 16px;
-    margin-top: 12px;
-}
-
-.elemento h3 {
-    font-size: 15px;
-    margin-bottom: 7px;
-    color: #54283e;
-}
-
-.elemento p {
-    color: #9c637e;
-    font-size: 12px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 12px;
+.entrar {
     display: block;
-    margin-top: 12px;
-}
-
-/* BOTONES */
-
-.boton {
-    display: inline-block;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 25px;
-    background: #e84f91;
-    color: white;
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+    color: #e84f91;
     font-size: 12px;
     font-weight: 800;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+    margin-top: 20px;
 }
 
-.boton:hover {
-    background: #cf3979;
+/* VISTAS INTERIORES */
+
+.vista {
+    display: none;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.vista.activa {
+    display: block;
+}
+
+.volver {
+    display: inline-block;
+    background: #fbd1e2;
+    color: #a34870;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px 17px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.titulo-vista {
+    margin-bottom: 8px;
+}
+
+.descripcion-vista {
+    color: #9c637e;
+    font-size: 13px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+/* LISTADO DE CONTENIDOS */
+
+.lista {
+    display: grid;
+    gap: 12px;
+}
+
+.item-lista {
+    width: 100%;
+    background: #fffafd;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 17px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: left;
+    cursor: pointer;
+    color: #54283e;
+    font-family: 'Nunito', sans-serif;
+    transition: background .2s, transform .2s;
+}
+
+.item-lista:hover {
+    background: #fff5fa;
     transform: translateY(-2px);
 }
 
-.boton:disabled {
-    background: #e8c5d5;
-    color: #795568;
-    cursor: not-allowed;
-    transform: none;
+.item-lista h3 {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.item-lista p {
+    color: #a77b90;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.flecha {
+    color: #e84f91;
+    font-size: 22px;
 }
 
 .etiqueta {
@@ -196,17 +226,59 @@ h2 {
     border-radius: 20px;
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: 0.8px;
-    margin-bottom: 9px;
+    letter-spacing: .8px;
 }
 
-.fecha {
-    color: #b76b8e !important;
+/* FICHAS */
+
+.ficha {
+    background: #fffafd;
+    border: 1.5px solid #f6b4d0;
+    border-radius: 23px;
+    padding: 25px;
+    box-shadow: 0 9px 22px rgba(216,91,145,0.10);
+}
+
+.ficha h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #d94d8a;
+    margin: 12px 0;
+}
+
+.ficha .fecha {
+    color: #b76b8e;
     font-weight: 800;
-    font-size: 11px !important;
+    font-size: 12px;
+    margin-bottom: 15px;
 }
 
-/* PIE */
+.ficha p {
+    color: #9c637e;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 11px 19px;
+    border: none;
+    border-radius: 25px;
+    background: #e84f91;
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.boton:hover {
+    background: #cf3979;
+    transform: translateY(-2px);
+}
 
 .pie {
     text-align: center;
@@ -215,14 +287,18 @@ h2 {
     margin-top: 32px;
 }
 
-/* MÓVILES */
+@media(max-width: 850px) {
+    .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 
 @media(max-width: 650px) {
     body {
         padding: 25px 13px 40px;
     }
 
-   .galeria {
+    .galeria {
         grid-template-columns: 1fr;
         gap: 16px;
     }
@@ -234,6 +310,10 @@ h2 {
     h2 {
         font-size: 29px;
     }
+
+    .ficha {
+        padding: 20px;
+    }
 }
 </style>
 </head>
@@ -242,14 +322,13 @@ h2 {
 
 <header>
     <h1>1:1 Nayara</h1>
-
     <div class="horario">
         <span class="punto"></span>
         Nuestras clases: martes y jueves, 18:00
     </div>
 </header>
 
-<div class="intro">
+<div class="intro" id="introduccion">
     <p>
         Este es tu espacio personal. Aquí encontrarás todo lo que vamos
         trabajando juntas: recursos, prácticas, clases y herramientas
@@ -257,59 +336,21 @@ h2 {
     </p>
 </div>
 
-<main class="galeria">
-    
-<!-- RECURSOS -->
-<section class="tarjeta-seccion">
+<!-- INICIO -->
+<main id="inicio" class="galeria">
 
-    <div class="cabecera-tarjeta">
-        <div class="icono">♫</div>
-        <div>
-            <h2>Recursos</h2>
-            <p class="subtitulo">Meditaciones y audios</p>
+    <div class="tarjeta-seccion" onclick="mostrarVista('recursos')">
+        <div class="cabecera-tarjeta">
+            <div class="icono">♫</div>
+            <div>
+                <h2>Recursos</h2>
+                <p class="subtitulo">Meditaciones y audios</p>
+            </div>
         </div>
+        <span class="entrar">ENTRAR →</span>
     </div>
 
-    <!-- MEDITACIÓN 1 -->
-    <div class="elemento">
-        <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
-
-        <h3>Abre el corazón</h3>
-
-        <p>
-            Un momento para detenerte, conectar con Dios
-            y abrir tu corazón a su presencia. Una meditación
-            preparada especialmente para ti.
-        </p>
-
-        <a href="abre-el-corazon.html" class="boton">
-            Escuchar meditación ♥
-        </a>
-    </div>
-
-    <!-- MEDITACIÓN 2 -->
-    <div class="elemento">
-        <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
-
-        <h3>Meditación para dormir</h3>
-
-        <p>
-            Un espacio de calma para acompañarte antes de dormir.
-            Una meditación hecha especialmente para ti,
-            con un mensaje inspirado en pasajes de los Salmos.
-        </p>
-
-        <a href="meditacion-para-dormir.html" class="boton">
-            Escuchar meditación ♥
-        </a>
-    </div>
-
-</section>
-
-
-    <!-- PRÁCTICAS -->
-    <section class="tarjeta-seccion">
-
+    <div class="tarjeta-seccion" onclick="mostrarVista('practicas')">
         <div class="cabecera-tarjeta">
             <div class="icono">♡</div>
             <div>
@@ -317,146 +358,21 @@ h2 {
                 <p class="subtitulo">Ejercicios y reflexión</p>
             </div>
         </div>
+        <span class="entrar">ENTRAR →</span>
+    </div>
 
-        <div class="elemento">
-            <span class="etiqueta">REFLEXIÓN PERSONAL</span>
-
-            <h3>Antes de empezar, Nayara</h3>
-
-            <p>
-                Un espacio para detenerte, mirar hacia dentro
-                y abrir tu corazón a Dios.
-            </p>
-
-            <a href="reflexion.html" class="boton">
-                ♥ Leer y reflexionar
-            </a>
+    <div class="tarjeta-seccion" onclick="mostrarVista('cursos')">
+        <div class="cabecera-tarjeta">
+            <div class="icono">✧</div>
+            <div>
+                <h2>Cursos</h2>
+                <p class="subtitulo">Clases y módulos</p>
+            </div>
         </div>
-
-        <div class="elemento">
-            <span class="etiqueta">PRÁCTICA DE 14 DÍAS</span>
-
-            <h3>En Presencia de Dios</h3>
-
-            <p>
-                Tu práctica para aprender a vivir
-                y permanecer en la presencia de Dios.
-            </p>
-
-           <a
-    href="En_Presencia_de_Dios_AED.pdf"
-    download
-    class="boton">
-    ↓ Descargar práctica ♥
-</a>
-        </div>
-
-    </section>
-
-
-
-<!-- CURSOS -->
-<section class="tarjeta-seccion">
-
-    <div class="cabecera-tarjeta">
-        <div class="icono">✧</div>
-        <div>
-            <h2>Cursos</h2>
-            <p class="subtitulo">Clases y módulos</p>
-        </div>
+        <span class="entrar">ENTRAR →</span>
     </div>
 
-    <!-- CLASE 1 -->
-    <div class="elemento">
-        <span class="etiqueta">CLASE NÚMERO 1</span>
-
-        <h3>Módulo 1 · El Señor</h3>
-
-        <p class="fecha">9 de noviembre de 2026</p>
-
-        <p>
-            El contenido de nuestra primera clase,
-            para que puedas volver a él y repasarlo
-            siempre que quieras.
-        </p>
-
-        <a
-            href="https://canva.link/1fo66su3ctbssl6"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="boton">
-            Ver clase ♥
-        </a>
-    </div>
-
-    <!-- CLASE 2 -->
-    <div class="elemento">
-        <span class="etiqueta">CLASE NÚMERO 2</span>
-
-        <h3>Módulo 1 · El Señor</h3>
-
-        <p class="fecha">11 de noviembre de 2026</p>
-
-        <p>
-            El camino que es Jesús. Una clase para profundizar
-            en la relación con Jesús y descubrir el camino
-            para acercarnos al Padre.
-        </p>
-
-        <a
-            href="./clase-2-el-camino.pdf"
-            download="El camino que es Jesús.pdf"
-            class="boton">
-            Descargar presentación ↓
-        </a>
-    </div>
-
-    <!-- PRE-CLASE -->
-    <div class="elemento">
-        <span class="etiqueta">PRE-CLASE</span>
-
-        <h3>Módulo 2 · Identidad</h3>
-
-        <p>
-            Este nuevo módulo es el punto de partida
-            para crear tu nueva identidad en Dios.
-        </p>
-
-        <a
-            href="https://www.youtube.com/watch?v=lnwrQSyHtDE"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="boton">
-            Ver vídeo ♥
-        </a>
-    </div>
-
-    <!-- CLASE 3 -->
-    <div class="elemento">
-        <span class="etiqueta">CLASE NÚMERO 3</span>
-
-        <h3>Clase 3</h3>
-
-        <p>
-            Nuevas diapositivas para continuar nuestro
-            recorrido de aprendizaje.
-        </p>
-
-        <a
-            href="https://claude.ai/artifact/CXmY6AqAgPPFTxwGbaMJph#slide-3dd33bdac6c2"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="boton">
-            Ver clase ♥
-        </a>
-    </div>
-
-</section>
-
-
-    <!-- GYM -->
-    <section class="tarjeta-seccion">
-
+    <div class="tarjeta-seccion" onclick="mostrarVista('gym')">
         <div class="cabecera-tarjeta">
             <div class="icono">♡</div>
             <div>
@@ -464,52 +380,264 @@ h2 {
                 <p class="subtitulo">Movimiento y bienestar</p>
             </div>
         </div>
-
-        <div class="elemento">
-            <span class="etiqueta">TU RUTINA PERSONAL</span>
-
-            <h3>Rutina de gimnasio</h3>
-
-            <p>
-                Aquí encontrarás tu rutina de entrenamiento
-                para que puedas consultarla y descargarla
-                siempre que la necesites.
-            </p>
-
-      <a
-    href="Rutina_Nayara.pdf"
-    download
-    class="boton">
-    ↓ Descargar rutina ♥
-</a>
-        </div>
-<div class="elemento">
-    <span class="etiqueta">GUÍA DE ALIMENTACIÓN</span>
-
-    <h3>Base de alimentación</h3>
-
-    <p>
-        Una guía para ayudarte a estructurar tus comidas
-        y acompañarte en la creación de hábitos de
-        alimentación en tu día a día.
-    </p>
-
-    <a
-        href="Guia_Alimentacion.pdf"
-        download
-        class="boton">
-        ↓ Descargar alimentación ♥
-    </a>
-</div>
-
-    </section>
+        <span class="entrar">ENTRAR →</span>
+    </div>
 
 </main>
+
+<!-- RECURSOS -->
+<section id="recursos" class="vista">
+    <button class="volver" onclick="mostrarVista('inicio')">← Volver al inicio</button>
+    <h2 class="titulo-vista">Recursos</h2>
+    <p class="descripcion-vista">Meditaciones y audios preparados para ti.</p>
+
+    <div class="lista">
+        <button class="item-lista" onclick="mostrarVista('recurso-corazon')">
+            <div>
+                <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
+                <h3>Abre el corazón</h3>
+                <p>Un momento para conectar con Dios.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('recurso-dormir')">
+            <div>
+                <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
+                <h3>Meditación para dormir</h3>
+                <p>Un espacio de calma antes de dormir.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+    </div>
+</section>
+
+<section id="recurso-corazon" class="vista">
+    <button class="volver" onclick="mostrarVista('recursos')">← Volver a Recursos</button>
+    <div class="ficha">
+        <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
+        <h3>Abre el corazón</h3>
+        <p>Un momento para detenerte, conectar con Dios y abrir tu corazón a su presencia. Una meditación preparada especialmente para ti.</p>
+        <a href="abre-el-corazon.html" class="boton">Escuchar meditación ♥</a>
+    </div>
+</section>
+
+<section id="recurso-dormir" class="vista">
+    <button class="volver" onclick="mostrarVista('recursos')">← Volver a Recursos</button>
+    <div class="ficha">
+        <span class="etiqueta">MEDITACIÓN PERSONALIZADA</span>
+        <h3>Meditación para dormir</h3>
+        <p>Un espacio de calma para acompañarte antes de dormir. Una meditación hecha especialmente para ti, con un mensaje inspirado en pasajes de los Salmos.</p>
+        <a href="meditacion-para-dormir.html" class="boton">Escuchar meditación ♥</a>
+    </div>
+</section>
+
+<!-- PRÁCTICAS -->
+<section id="practicas" class="vista">
+    <button class="volver" onclick="mostrarVista('inicio')">← Volver al inicio</button>
+    <h2 class="titulo-vista">Prácticas</h2>
+    <p class="descripcion-vista">Ejercicios y reflexión para tu camino.</p>
+
+    <div class="lista">
+        <button class="item-lista" onclick="mostrarVista('practica-reflexion')">
+            <div>
+                <span class="etiqueta">REFLEXIÓN PERSONAL</span>
+                <h3>Antes de empezar, Nayara</h3>
+                <p>Un espacio para detenerte y abrir tu corazón.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('practica-presencia')">
+            <div>
+                <span class="etiqueta">PRÁCTICA DE 14 DÍAS</span>
+                <h3>En Presencia de Dios</h3>
+                <p>Aprender a vivir y permanecer en su presencia.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+    </div>
+</section>
+
+<section id="practica-reflexion" class="vista">
+    <button class="volver" onclick="mostrarVista('practicas')">← Volver a Prácticas</button>
+    <div class="ficha">
+        <span class="etiqueta">REFLEXIÓN PERSONAL</span>
+        <h3>Antes de empezar, Nayara</h3>
+        <p>Un espacio para detenerte, mirar hacia dentro y abrir tu corazón a Dios.</p>
+        <a href="reflexion.html" class="boton">♥ Leer y reflexionar</a>
+    </div>
+</section>
+
+<section id="practica-presencia" class="vista">
+    <button class="volver" onclick="mostrarVista('practicas')">← Volver a Prácticas</button>
+    <div class="ficha">
+        <span class="etiqueta">PRÁCTICA DE 14 DÍAS</span>
+        <h3>En Presencia de Dios</h3>
+        <p>Tu práctica para aprender a vivir y permanecer en la presencia de Dios.</p>
+        <a href="En_Presencia_de_Dios_AED.pdf" download class="boton">↓ Descargar práctica ♥</a>
+    </div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos" class="vista">
+    <button class="volver" onclick="mostrarVista('inicio')">← Volver al inicio</button>
+    <h2 class="titulo-vista">Cursos</h2>
+    <p class="descripcion-vista">Tus clases y el recorrido de cada módulo.</p>
+
+    <div class="lista">
+
+        <button class="item-lista" onclick="mostrarVista('clase1')">
+            <div>
+                <span class="etiqueta">CLASE NÚMERO 1</span>
+                <h3>Módulo 1 · El Señor</h3>
+                <p>9 de noviembre de 2026</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('clase2')">
+            <div>
+                <span class="etiqueta">CLASE NÚMERO 2</span>
+                <h3>Módulo 1 · El Señor</h3>
+                <p>11 de noviembre de 2026</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('preclase')">
+            <div>
+                <span class="etiqueta">PRE-CLASE</span>
+                <h3>Módulo 2 · Identidad</h3>
+                <p>Introducción al nuevo módulo.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('clase3')">
+            <div>
+                <span class="etiqueta">CLASE NÚMERO 3</span>
+                <h3>Continuamos nuestro recorrido</h3>
+                <p>Nuevas diapositivas de clase.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+    </div>
+</section>
+
+<section id="clase1" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <div class="ficha">
+        <span class="etiqueta">CLASE NÚMERO 1</span>
+        <h3>Módulo 1 · El Señor</h3>
+        <p class="fecha">9 de noviembre de 2026</p>
+        <p>El contenido de nuestra primera clase, para que puedas volver a él y repasarlo siempre que quieras.</p>
+        <a href="https://canva.link/1fo66su3ctbssl6" target="_blank" rel="noopener noreferrer" class="boton">Ver clase ♥</a>
+    </div>
+</section>
+
+<section id="clase2" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <div class="ficha">
+        <span class="etiqueta">CLASE NÚMERO 2</span>
+        <h3>Módulo 1 · El Señor</h3>
+        <p class="fecha">11 de noviembre de 2026</p>
+        <p>El camino que es Jesús. Una clase para profundizar en la relación con Jesús y descubrir el camino para acercarnos al Padre.</p>
+        <a href="./clase-2-el-camino.pdf" download="El camino que es Jesús.pdf" class="boton">Descargar presentación ↓</a>
+    </div>
+</section>
+
+<section id="preclase" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <div class="ficha">
+        <span class="etiqueta">PRE-CLASE</span>
+        <h3>Módulo 2 · Identidad</h3>
+        <p>Este nuevo módulo es el punto de partida para crear tu nueva identidad en Dios.</p>
+        <a href="https://www.youtube.com/watch?v=lnwrQSyHtDE" target="_blank" rel="noopener noreferrer" class="boton">Ver vídeo ♥</a>
+    </div>
+</section>
+
+<section id="clase3" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <div class="ficha">
+        <span class="etiqueta">CLASE NÚMERO 3</span>
+        <h3>Continuamos nuestro recorrido</h3>
+        <p>Nuevas diapositivas para continuar nuestro recorrido de aprendizaje.</p>
+        <a href="https://claude.ai/artifact/CXmY6AqAgPPFTxwGbaMJph#slide-3dd33bdac6c2" target="_blank" rel="noopener noreferrer" class="boton">Ver clase ♥</a>
+    </div>
+</section>
+
+<!-- GYM -->
+<section id="gym" class="vista">
+    <button class="volver" onclick="mostrarVista('inicio')">← Volver al inicio</button>
+    <h2 class="titulo-vista">Gym</h2>
+    <p class="descripcion-vista">Movimiento, bienestar y hábitos para tu día a día.</p>
+
+    <div class="lista">
+        <button class="item-lista" onclick="mostrarVista('rutina')">
+            <div>
+                <span class="etiqueta">TU RUTINA PERSONAL</span>
+                <h3>Rutina de gimnasio</h3>
+                <p>Tu entrenamiento para consultar y descargar.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('alimentacion')">
+            <div>
+                <span class="etiqueta">GUÍA DE ALIMENTACIÓN</span>
+                <h3>Base de alimentación</h3>
+                <p>Una guía para estructurar tus comidas.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+    </div>
+</section>
+
+<section id="rutina" class="vista">
+    <button class="volver" onclick="mostrarVista('gym')">← Volver a Gym</button>
+    <div class="ficha">
+        <span class="etiqueta">TU RUTINA PERSONAL</span>
+        <h3>Rutina de gimnasio</h3>
+        <p>Aquí encontrarás tu rutina de entrenamiento para que puedas consultarla y descargarla siempre que la necesites.</p>
+        <a href="Rutina_Nayara.pdf" download class="boton">↓ Descargar rutina ♥</a>
+    </div>
+</section>
+
+<section id="alimentacion" class="vista">
+    <button class="volver" onclick="mostrarVista('gym')">← Volver a Gym</button>
+    <div class="ficha">
+        <span class="etiqueta">GUÍA DE ALIMENTACIÓN</span>
+        <h3>Base de alimentación</h3>
+        <p>Una guía para ayudarte a estructurar tus comidas y acompañarte en la creación de hábitos de alimentación en tu día a día.</p>
+        <a href="Guia_Alimentacion.pdf" download class="boton">↓ Descargar alimentación ♥</a>
+    </div>
+</section>
 
 <footer class="pie">
     Hecho con cariño para ti ♥
 </footer>
 
+<script>
+function mostrarVista(id) {
+    document.getElementById('inicio').style.display = 'none';
+    document.getElementById('introduccion').style.display = 'none';
+
+    document.querySelectorAll('.vista').forEach(function(vista) {
+        vista.classList.remove('activa');
+    });
+
+    if (id === 'inicio') {
+        document.getElementById('inicio').style.display = 'grid';
+        document.getElementById('introduccion').style.display = 'block';
+    } else {
+        document.getElementById(id).classList.add('activa');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
-
