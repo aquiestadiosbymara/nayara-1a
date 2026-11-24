@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -67,7 +66,7 @@ h1 {
     line-height: 1.7;
 }
 
-/* NAVEGACIÓN PRINCIPAL */
+/* INICIO */
 
 .galeria {
     width: 100%;
@@ -135,7 +134,7 @@ h2 {
     margin-top: 20px;
 }
 
-/* VISTAS INTERIORES */
+/* VISTAS */
 
 .vista {
     display: none;
@@ -151,7 +150,6 @@ h2 {
     display: inline-block;
     background: #fbd1e2;
     color: #a34870;
-    text-decoration: none;
     border-radius: 25px;
     padding: 10px 17px;
     font-size: 12px;
@@ -173,7 +171,7 @@ h2 {
     line-height: 1.6;
 }
 
-/* LISTADO DE CONTENIDOS */
+/* LISTADOS */
 
 .lista {
     display: grid;
@@ -361,12 +359,12 @@ h2 {
         <span class="entrar">ENTRAR →</span>
     </div>
 
-    <div class="tarjeta-seccion" onclick="mostrarVista('cursos')">
+    <div class="tarjeta-seccion" onclick="mostrarVista('cursos-menu')">
         <div class="cabecera-tarjeta">
             <div class="icono">✧</div>
             <div>
                 <h2>Cursos</h2>
-                <p class="subtitulo">Clases y módulos</p>
+                <p class="subtitulo">Formación y clases</p>
             </div>
         </div>
         <span class="entrar">ENTRAR →</span>
@@ -479,9 +477,36 @@ h2 {
     </div>
 </section>
 
-<!-- CURSOS -->
-<section id="cursos" class="vista">
+<!-- MENÚ CURSOS -->
+<section id="cursos-menu" class="vista">
     <button class="volver" onclick="mostrarVista('inicio')">← Volver al inicio</button>
+    <h2 class="titulo-vista">Cursos</h2>
+    <p class="descripcion-vista">Elige qué contenido quieres consultar.</p>
+
+    <div class="lista">
+        <button class="item-lista" onclick="mostrarVista('cursos-listado')">
+            <div>
+                <span class="etiqueta">FORMACIÓN</span>
+                <h3>Cursos</h3>
+                <p>Clases y módulos de nuestro recorrido.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+
+        <button class="item-lista" onclick="mostrarVista('personalizadas')">
+            <div>
+                <span class="etiqueta">CLASES GRABADAS</span>
+                <h3>Clases personalizadas</h3>
+                <p>Sesiones grabadas especialmente para ti.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+    </div>
+</section>
+
+<!-- CURSOS Y MÓDULOS -->
+<section id="cursos-listado" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos-menu')">← Volver a Cursos</button>
     <h2 class="titulo-vista">Cursos</h2>
     <p class="descripcion-vista">Tus clases y el recorrido de cada módulo.</p>
 
@@ -517,8 +542,8 @@ h2 {
         <button class="item-lista" onclick="mostrarVista('clase3')">
             <div>
                 <span class="etiqueta">CLASE NÚMERO 3</span>
-                <h3>Modulo 2 · Identidad</h3>
-                <p>El nuevo Ser.</p>
+                <h3>Módulo 2 · Identidad</h3>
+                <p>El nuevo ser.</p>
             </div>
             <span class="flecha">›</span>
         </button>
@@ -526,8 +551,9 @@ h2 {
     </div>
 </section>
 
+<!-- FICHAS DE CURSOS -->
 <section id="clase1" class="vista">
-    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <button class="volver" onclick="mostrarVista('cursos-listado')">← Volver a Cursos</button>
     <div class="ficha">
         <span class="etiqueta">CLASE NÚMERO 1</span>
         <h3>Módulo 1 · El Señor</h3>
@@ -538,7 +564,7 @@ h2 {
 </section>
 
 <section id="clase2" class="vista">
-    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <button class="volver" onclick="mostrarVista('cursos-listado')">← Volver a Cursos</button>
     <div class="ficha">
         <span class="etiqueta">CLASE NÚMERO 2</span>
         <h3>Módulo 1 · El Señor</h3>
@@ -549,7 +575,7 @@ h2 {
 </section>
 
 <section id="preclase" class="vista">
-    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <button class="volver" onclick="mostrarVista('cursos-listado')">← Volver a Cursos</button>
     <div class="ficha">
         <span class="etiqueta">PRE-CLASE</span>
         <h3>Módulo 2 · Identidad</h3>
@@ -559,12 +585,40 @@ h2 {
 </section>
 
 <section id="clase3" class="vista">
-    <button class="volver" onclick="mostrarVista('cursos')">← Volver a Cursos</button>
+    <button class="volver" onclick="mostrarVista('cursos-listado')">← Volver a Cursos</button>
     <div class="ficha">
         <span class="etiqueta">CLASE NÚMERO 3</span>
         <h3>Módulo 2 · Identidad</h3>
-        <p>El nuevo ser : como cambiar tu identidad reconfigurando tu mente</p>
+        <p>El nuevo ser: cómo cambiar tu identidad reconfigurando tu mente.</p>
         <a href="https://claude.ai/artifact/CXmY6AqAgPPFTxwGbaMJph#slide-3dd33bdac6c2" target="_blank" rel="noopener noreferrer" class="boton">Ver clase ♥</a>
+    </div>
+</section>
+
+<!-- CLASES PERSONALIZADAS -->
+<section id="personalizadas" class="vista">
+    <button class="volver" onclick="mostrarVista('cursos-menu')">← Volver a Cursos</button>
+    <h2 class="titulo-vista">Clases personalizadas</h2>
+    <p class="descripcion-vista">Sesiones grabadas especialmente para ti.</p>
+
+    <div class="lista">
+        <button class="item-lista" onclick="mostrarVista('grabada1')">
+            <div>
+                <span class="etiqueta">SANACIÓN </span>
+                <h3>SANACIÓN</h3>
+                <p>Una sesión personalizada para volver a ver cuando quieras.</p>
+            </div>
+            <span class="flecha">›</span>
+        </button>
+    </div>
+</section>
+
+<section id="grabada1" class="vista">
+    <button class="volver" onclick="mostrarVista('personalizadas')">← Volver a Clases personalizadas</button>
+    <div class="ficha">
+        <span class="etiqueta">SANACIÓN</span>
+        <h3>SANACIÓN</h3>
+        <p>Una sesión personalizada para que puedas volver a verla y repasar su contenido siempre que lo necesites.</p>
+        <a href="https://www.youtube.com/watch?v=ORjXPDi2j3g" target="_blank" rel="noopener noreferrer" class="boton">Ver clase grabada ♥</a>
     </div>
 </section>
 
@@ -641,3 +695,4 @@ function mostrarVista(id) {
 
 </body>
 </html>
+
